@@ -1,0 +1,20 @@
+trigger:
+  - master   # o main, según tu rama
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x'
+
+- script: dotnet restore
+  displayName: 'Restore dependencies'
+
+- script: dotnet build --no-restore
+  displayName: 'Build'
+
+- script: dotnet test --no-build --verbosity normal
+  displayName: 'Run tests'
