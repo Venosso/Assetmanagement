@@ -2,7 +2,7 @@ trigger:
   - master   # o main, según tu rama
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'OwnPool'
 
 steps:
 - task: UseDotNet@2
