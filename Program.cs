@@ -1,4 +1,4 @@
-
+//API REST
 using Assetmanagement.Data;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
